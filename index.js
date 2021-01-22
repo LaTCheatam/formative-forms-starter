@@ -1,12 +1,17 @@
 const express = require("express");
-
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.set("view engine", "pug");
 
+// const user = []
+
+// app.get("/user", (req, res) => {
+//   res.render("index", {title: "Users"})
+// });
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("index", {users});
 });
 
 const users = [
